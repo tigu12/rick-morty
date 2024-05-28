@@ -98,6 +98,8 @@
       </div>
 
       <footer class="bg-gray-900 text-white text-center py-4">
+         <a href="https://github.com/tigu12" target="_blank" rel="noopener noreferrer" class="cursor-pointer text-green-600 font-semibold hover:underline mt-4">GitHub</a><br>
+  <a href="https://www.figma.com/design/imgcBGTc1PQmVlnQpCxXWc/home-page?node-id=0-1&t=74dRHcyTN9SldRjm-0" target="_blank" rel="noopener noreferrer" class="cursor-pointer text-green-600 font-semibold hover:underline mt-4">figma-link</a>
         <p>&copy; 2024 Rick and Morty. All rights reserved.</p>
       </footer>
     </div>
