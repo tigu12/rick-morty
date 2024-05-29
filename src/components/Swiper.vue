@@ -28,9 +28,9 @@
   
   // Define your slides data
   const slides = ref([
-    { image: 'https://ashisheditz.com/wp-content/uploads/2023/10/rick-and-morty-wallpaper-cool_11zon.jpg', alt: 'Slide 1' },
+    { image: 'https://images7.alphacoders.com/133/1335145.jpg', alt: 'Slide 1' },
     { image: 'https://c4.wallpaperflare.com/wallpaper/410/59/609/rick-and-morty-tv-rick-sanchez-morty-smith-wallpaper-preview.jpg', alt: 'Slide 2' },
-    { image: 'https://wallpapercave.com/wp/wp1822728.jpg', alt: 'Slide 3' },
+    { image: 'https://wallpapers.com/images/featured/rick-and-morty-cool-t3ynu5ly9m7jq6e2.jpg', alt: 'Slide 3' },
   ])
   </script>
   
