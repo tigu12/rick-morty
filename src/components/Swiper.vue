@@ -8,7 +8,7 @@
     :autoplay="{ delay: 3000 }"
   >
     <swiper-slide v-for="(slide, index) in slides" :key="index">
-      <img :src="(`src/assets/pictures/${slide.image}`)" :alt="slide.alt" class="w-full h-auto rounded-lg shadow-lg" />
+      // <img :src="(`src/assets/pictures/${slide.image}`)" :alt="slide.alt" class="w-full h-auto rounded-lg shadow-lg" />
     </swiper-slide>
   </swiper>
 
