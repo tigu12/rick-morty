@@ -1,13 +1,66 @@
+<script setup>
+import { ref, computed } from 'vue'
+import gql from 'graphql-tag'
+import { useQuery } from '@vue/apollo-composable'
+
+const CHARACTERS_QUERY = gql`
+  query Characters {
+    characters {
+      results {
+        id
+        name
+        image
+        status
+        gender
+        species
+        location {
+          name
+        }
+        episode {
+          name
+          episode
+          air_date
+          created
+        }
+      }
+    }
+  }
+`
+const { result, loading, error } = useQuery(CHARACTERS_QUERY);
+
+const initialCharactersCount = 10
+const charactersToShow = ref(initialCharactersCount)
+
+const displayedCharacters = computed(() => {
+  return result.value?.characters.results.slice(0, charactersToShow.value) || []
+})
+
+const showMoreButton = computed(() => {
+  return result.value && charactersToShow.value < result.value.characters.results.length
+})
+
+const showLessButton = computed(() => {
+  return charactersToShow.value > initialCharactersCount
+})
+
+function showMore() {
+  charactersToShow.value += initialCharactersCount
+}
+
+function showLess() {
+  charactersToShow.value = initialCharactersCount
+}
+
+console.log(result.value)
+</script>
 <template>
   <div class="bg-black min-h-screen">
     <nav class="bg-gray-600 p-4">
       <div class="container mx-auto flex justify-between items-center">
-        <!-- Logo or Branding -->
         <div class="text-white text-sm font-bold flex items-center">
           <a href="#"></a>
           <span>Rick&Morty</span>
         </div>
-        <!-- Navigation Links -->
         <div class="flex space-x-4 text-white">
           <router-link :to="{ path: '/' }"><a class="hover:underline">Home</a></router-link>
           <router-link :to="{ path: '/Episodes/' }"><a class="hover:underline">Episodes</a></router-link>
@@ -75,68 +128,8 @@
     </div>
   </div>
 </template>
-
-<script setup>
-import { ref, computed } from 'vue'
-import gql from 'graphql-tag'
-import { useQuery } from '@vue/apollo-composable'
-
-const CHARACTERS_QUERY = gql`
-  query Characters {
-    characters {
-      results {
-        id
-        name
-        image
-        status
-        gender
-        species
-        location {
-          name
-        }
-        episode {
-          name
-          episode
-          air_date
-          created
-        }
-      }
-    }
-  }
-`
-const { result, loading, error } = useQuery(CHARACTERS_QUERY);
-
-const initialCharactersCount = 10
-const charactersToShow = ref(initialCharactersCount)
-
-const displayedCharacters = computed(() => {
-  return result.value?.characters.results.slice(0, charactersToShow.value) || []
-})
-
-const showMoreButton = computed(() => {
-  return result.value && charactersToShow.value < result.value.characters.results.length
-})
-
-const showLessButton = computed(() => {
-  return charactersToShow.value > initialCharactersCount
-})
-
-function showMore() {
-  charactersToShow.value += initialCharactersCount
-}
-
-function showLess() {
-  charactersToShow.value = initialCharactersCount
-}
-
-console.log(result.value)
-</script>
-
 <style scoped>
-/* Tailwind CSS import */
 @import 'https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css';
-
-/* Custom styles for character container */
 .bg-gray-800 {
   background-color: #1f2937; /* Dark gray */
   color: #f3f4f6; /* Light gray */
