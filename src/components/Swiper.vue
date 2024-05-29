@@ -28,9 +28,9 @@
   
   // Define your slides data
   const slides = ref([
-    { image: 'pic2.webp', alt: 'Slide 1' },
-    { image: 'pic7.jpg', alt: 'Slide 2' },
-    { image: 'pic5.jpg', alt: 'Slide 3' },
+    { image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgHM0dZBd2H3WHTswZZ5FNEYbTmvmJCaHdmw&s', alt: 'Slide 1' },
+    { image: 'https://c4.wallpaperflare.com/wallpaper/410/59/609/rick-and-morty-tv-rick-sanchez-morty-smith-wallpaper-preview.jpg', alt: 'Slide 2' },
+    { image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRLiBWHpBxXiHjM8AxtirViT-LLct_WkCqpidyxGX22sS_Wm3Ql3v7ra1_e_LTB1hk5NQ&usqp=CAU', alt: 'Slide 3' },
   ])
   </script>
   
