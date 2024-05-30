@@ -44,7 +44,7 @@ function toggleShowAll() {
         <div class="text-white text-l font-get-schwifty flex items-center">
           <a href="#">
           </a>
-          <h3><span>Rick & Morty</span></h3>
+          <h3><span>Rick and Morty</span></h3>
         </div>
         <div class="flex space-x-4 text-white">
           <router-link :to="{ path: '/' }"><a class="hover:underline">Home</a></router-link>
