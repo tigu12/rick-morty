@@ -120,6 +120,7 @@ console.log(result.value)
           <button v-if="showLessButton" @click="showLess" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Show Less</button>
         </div>
         <footer class="bg-gray-900 text-white text-center py-4">
+          <h2 Tigist Negussie>
           <a href="https://github.com/tigu12" target="_blank" rel="noopener noreferrer" class="cursor-pointer text-green-600 font-semibold hover:underline mt-4">GitHub</a><br>
   <a href="https://www.figma.com/design/nWGxclMZ0MT5JZcZA5qZ8j/Untitled?node-id=0-1&t=nxDJjJcwxU9h9EQe-0" target="_blank" rel="noopener noreferrer" class="cursor-pointer text-green-600 font-semibold hover:underline mt-4">figma-link</a>
         <p>&copy; 2024 Rick and Morty. All rights reserved.</p>
