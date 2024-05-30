@@ -57,7 +57,7 @@ console.log(result.value)
   <div class="bg-black min-h-screen">
     <nav class="bg-gray-600 p-4">
       <div class="container mx-auto flex justify-between items-center">
-        <div class="text-white text-sm font-bold flex items-center">
+        <div class="text-white text-sm font-get-schwifty flex items-center">
           <a href="#"></a>
           <span>Rick&Morty</span>
         </div>
