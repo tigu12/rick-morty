@@ -59,7 +59,7 @@ console.log(result.value)
       <div class="container mx-auto flex justify-between items-center">
         <div class="text-white text-sm font-get-schwifty flex items-center">
           <a href="#"></a>
-          <span>Rick&Morty</span>
+          <span>Rick and Morty</span>
         </div>
         <div class="flex space-x-4 text-white">
           <router-link :to="{ path: '/' }"><a class="hover:underline">Home</a></router-link>
